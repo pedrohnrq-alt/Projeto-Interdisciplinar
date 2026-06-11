@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="./style-pedido.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ========== CABEÇALHO ========== -->
+    <header>
+
+        <div class="logo">
+            <img src="images/icone.jpg" alt="Ícone de sangue">
+            <span>PRÓ VIDA | Sistema de Controle e Doação de Sangue</span>
+        </div>
+
+        <!-- Checkbox do menu (invisível) -->
+        <input type="checkbox" id="menu-toggle">
+
+        <!-- Ícone hambúrguer -->
+        <label for="menu-toggle" class="hamburger">☰</label>
+
+        <!-- Menu sem script -->
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="cadastro.html">Cadastros</a>
+            <a href="pedido.html">Doações</a>
+            <a href="noticias.html">Notícias</a>
+            <a href="login.html">Login</a>
+        </nav>
+
+    </header>
+
+    <main>
+        <div class="form-container">
+            <form action="#" method="post"> <!-- Falta colocar o action que é o destino dos dados -->
+
+                <h1 class="montserrat">CADASTRO DE PEDIDOS</h1>
+                <h4 class="montserrat">Faça aqui seu pedido</h4>
+
+                <!-- Caixa CPF -->
+                <label for="cpf" class="display-block">CPF</label>
+                <input type="number" id="cpf" class="config" name="cpf" placeholder="000.000.000-00" required>
+                <!-- Verificar como colocar quantidade máxima permitida, permitir só números e colocar pontos 000.000.000-00 -->
+
+                <!-- Caixa data de nascimento -->
+                <label for="data" class="display-block">Data de Nascimento</label>
+                <input type="date" id="data" class="config" name="data" placeholder="00/00/00">
+
+                <!-- Caixa nome -->
+                <label for="nome" class="display-block">Nome Completo</label>
+                <input type="text" id="nome" class="config" name="nome" maxlength="80" placeholder="Nome Sobrenome"
+                    required>
+
+                <!-- Caixa whatsapp -->
+                <label for="whatsapp" class="display-block">WhatsApp</label>
+                <input type="number" id="whatsapp" class="config" name="whatsapp" placeholder="(00) 00000-0000"
+                    required>
+                <!-- Verificar como colocar quantidade máxima permitida, permitir só números e colocar pontos 000.000.000-00 -->
+
+                <!-- Seleção tipo sanguíneo -->
+                <label for="tipo-sanguineo" class="display-block">Selecione seu tipo sanguíneo</label>
+                <select name="tipo-sanguineo" id="tipo-sanguineo" class="config">
+                    <option value="a+">A+</option>
+                    <option value="a-">A-</option>
+                    <option value="b+">B+</option>
+                    <option value="b-">B-</option>
+                    <option value="ab+">AB+</option>
+                    <option value="ab-">AB-</option>
+                    <option value="o+">O+</option>
+                    <option value="o-">O-</option>
+                    <option value="seminf">Não sei informar</option>
+                </select>
+
+                <!-- Caixa motivo -->
+                <label for="motivo" class="display-block">Motivo da Solicitação</label>
+                <input type="text" id="motivo" class="config" name="motivo" maxlength="80"
+                    placeholder="Acidente/Transfusão..." required>
+
+                <!-- Caixa quantidade -->
+                <label for="quantidade" class="display-block">Quantidade de Sangue Necessária</label>
+                <input type="text" id="quantidade" class="config" name="quantidade" maxlength="80"
+                    placeholder="3 Litros" required>
+
+                <h3 class="montserrat">INFORMAÇÕES SOBRE LOCAL DE COLETA</h3>
+
+                <!-- Hospital -->
+                <label for="hospital" class="display-block">Local da Coleta</label>
+                <input type="text" id="hospital" class="config" name="hospital" placeholder="Nome do Hospital" required>
+
+                <!-- Caixa data da coleta -->
+                <label for="data" class="display-block">Data da Coleta</label>
+                <input type="date" id="data" class="config" name="data" placeholder="00/00/00">
+
+                <!-- Caixa horário -->
+                <label for="horário" class="display-block">Horário da Coleta</label>
+                <input type="number" id="horário" class="config" name="horário" placeholder="08:00 às 10:00">
+
+                <!-- Cidade -->
+                <label for="cidade" class="display-block">Cidade</label>
+                <input type="text" id="cidade" class="config" name="cidade" placeholder="Nome da Cidade" required>
+
+                <!-- Estado -->
+                <label for="estado" class="display-block">Estado:</label>
+                <input type="text" id="estado" class="config" name="estado" value="São Paulo" required>
+
+                <!-- País -->
+                <label for="pais" class="display-block">País:</label>
+                <input type="text" id="pais" class="config" name="pais" value="Brasil" required>
+
+                <!-- Caixa imagem -->
+                <label for="imagem" class="display-block">Nos envie uma foto sua: (opcional) </label>
+                <input type="file" id="imagem" class="config" name="imagem" value="imagem">
+
+                <!-- Outras informações -->
+                <h3 class="montserrat" id="h3">OUTRAS INFORMAÇÕES</h3>
+                <div class="checkbox-group">
+                    <label>
+                        <input type="checkbox" name="veracidade">Declaro que todas as informações prestadas neste
+                        formulário
+                        são verdadeiras e correspondem à realidade.
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="termos-de-uso">Li, compreendi e concordo com os Termos de Uso e a
+                        Política de Privacidade, ciente das condições de utilização dos meus dados.
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="lgpd">Autorizo o tratamento dos meus dados pessoais em conformidade
+                        com
+                        a Lei Geral de Proteção de Dados (Lei nº 13.709/2018 – LGPD).
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="autorização">Autorizo a publicação do pedido do feed da página,
+                        para que outras pessoas possam ver e se mobilizar.
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="ciencia">Tenho ciência de que meu pedido terá o prazo de uma semana
+                        e que se nesse tempo não for atingida a quantidade necessária novamente eu posso voltar a fazer
+                        uma nova solicitação.
+                    </label>
+                </div>
+                <input type="submit" id="cadastrar" value="CADASTRAR">
+            </form>
+
+            <aside>
+                <img src="./images/img-pedido.jpg" alt="Banner Mobile">
+            </aside>
+        </div>
+    </main>
+
+    <hr>
+
+    <footer>
+        <div class="footer-area">
+            <img src="./images/brasao.png" alt="brasao" id="brasao">
+            <div class="endereco">
+                <p>Rua Pedro de Toledo, 486, Centro - Lins-SP</p>
+                <p>(14) 3533-2500</p>
+                <p id="direitos">© 2025 – Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

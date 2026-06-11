@@ -1,0 +1,200 @@
+/* Mobile First */
+body {
+    background-color: #fff;
+    color: #2E2E2E;
+    font-family: "Roboto", sans-serif;
+    font-size: 17px;
+}
+
+.montserrat {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    color: #B12727;
+    margin-left: 15px;
+    margin-bottom: -10px;
+
+}
+
+h1 {
+    font-size: 24px;
+    margin-top: -1px;
+}
+
+label {
+    font-size: 16px;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+#brasao {
+    height: 100px;
+    margin: 20px;
+}
+
+footer {
+    width: 100%;
+}
+
+.footer-area {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.endereco {
+    flex: 1;
+    text-align: center;
+}
+
+.endereco p {
+    margin: 2px 0;
+}
+
+#direitos {
+    font-size: 13px;
+}
+
+.display-block {
+    display: block;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+.config {
+    border: 1px solid #807b7b;
+    background: #FFFFFF;
+    border-radius: 5px;
+    width: 83%;
+    height: 22px;
+    padding: 2px 0 2px 10px;
+    font-size: 15px;
+    margin: 5px 0px -10px 15px;
+}
+
+.card {
+  width: 350px;
+  height: 450px;
+  margin: 80px auto;
+  padding: 28px;
+  border-radius: 12px;
+  border: 2px solid #000;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, .08);
+  background: #fff;
+}
+
+#texto {
+    padding: 50px 0 ;
+}
+
+#postar {
+   margin-top: 10px;
+   margin-left: 15px;
+    height: 28px;
+    border: 1px solid #807b7b;
+    border-radius: 5px;
+    background-color: #e20a0a;
+    color: #dfd8d8;
+    width: 25%;
+    font-weight: bolder;
+    font-size: 80%;
+}
+
+/* ============================
+       CABEÇALHO
+       ============================ */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  border-bottom: 1px solid #ccc;
+  background: #fff;
+  position: relative;
+  z-index: 100;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+}
+
+.logo img {
+  width: 70px;
+  height: 50px;
+}
+
+/* ============================
+       MENU HAMBÚRGUER SEM SCRIPT
+       (checkbox hack)
+       ============================ */
+
+/* Checkbox escondido */
+#menu-toggle {
+  display: none;
+}
+
+/* Ícone hambúrguer */
+.hamburger {
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
+  /* aparece só no celular */
+  user-select: none;
+}
+
+/* Menu em desktop */
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #000;
+}
+
+nav a:hover {
+  color: #d60000;
+}
+
+@media (max-width: 900px) {
+
+  /* Ícone do menu aparece */
+  .hamburger {
+    display: block;
+  }
+
+  /* Menu some no mobile */
+  nav {
+    display: block;
+    position: absolute;
+    top: 65px;
+    right: 20px;
+    background: white;
+    width: 180px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: 0.3s;
+  }
+
+  nav a {
+    display: block;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+  }
+
+  /* Quando o checkbox está marcado, o menu aparece */
+  #menu-toggle:checked~nav {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+}
