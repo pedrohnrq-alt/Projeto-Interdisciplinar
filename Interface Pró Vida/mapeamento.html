@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mapeamento | Nome do site</title>
+  <link rel="stylesheet" href="style-mapeamento.css">
+
+</head>
+
+<body>
+  <!-- ========== CABEÇALHO ========== -->
+  <header>
+
+    <div class="logo">
+      <img src="images/icone.jpg" alt="Ícone de sangue">
+      <span>PRÓ VIDA | Sistema de Controle e Doação de Sangue</span>
+    </div>
+
+    <!-- Checkbox do menu (invisível) -->
+    <input type="checkbox" id="menu-toggle">
+
+    <!-- Ícone hambúrguer -->
+    <label for="menu-toggle" class="hamburger">☰</label>
+
+    <!-- Menu sem script -->
+    <nav>
+      <a href="mapeamento.html">Mapeamento</a>
+      <a href="postagem.html">Postagem</a>
+    </nav>
+
+  </header>
+
+
+  <main>
+    <h2> Mapeamento </h2>
+
+    <form action="" class="FormCEP">
+      <div class="caixa-input">
+        <label for="cep">CEP:</label>
+        <input type="text" name="CEP" placeholder="00.000-000">
+      </div>
+    </form>
+
+    <div class="Mapa">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29662.23789791975!2d-49.76515677255207!3d-21.672424079123434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94be14d250277975%3A0x3fc5d189489e0104!2sLins%2C%20SP!5e0!3m2!1spt-BR!2sbr!4v1762624365490!5m2!1spt-BR!2sbr"
+        height="500" style="border:2px solid lightgrey; border-radius:10px ;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <div class="EstatisticaText">
+      <p> Estatística de arrecadação do banco de sangue correspondente ao CEP inserido </p>
+    </div>
+
+    <div class="CaixasSangue">
+      <div class="Coluna">
+        <div class="PorcenSangue">
+          <p> A+ ??% </p>
+        </div>
+        <div class="PorcenSangue">
+          <p> B+ ??% </p>
+        </div>
+        <div class="PorcenSangue">
+          <p> O+ ??% </p>
+        </div>
+        <div class="PorcenSangue">
+          <p> AB+ ??% </p>
+        </div>
+      </div>
+
+      <div class="Coluna">
+        <div class="PorcenSangue">
+          <p> A- ??% </p>
+        </div>
+        <div class="PorcenSangue">
+          <p> B- ??% </p>
+        </div>
+        <div class="PorcenSangue">
+          <p> O- ??% </p>
+        </div>
+        <div class="PorcenSangue">
+          <p> AB- ??% </p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <hr>
+
+  <!-- Rodapé -->
+  <footer>
+    <div class="footer-area">
+      <img src="./images/brasao.png" alt="brasao" id="brasao">
+      <div class="endereco">
+        <p>Rua Pedro de Toledo, 486, Centro - Lins-SP</p>
+        <p>(14) 3533-2500</p>
+        <p id="direitos">© 2025 – Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
